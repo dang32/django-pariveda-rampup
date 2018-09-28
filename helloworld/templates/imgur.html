@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Imgur</title>
+</head>
+
+<body>
+  {% if images %}
+    <div>
+      <h2> Random Imgur post from r/aww:</h2>
+      <blockquote class="imgur-embed-pub" lang="en" data-id={{random_image.id}}><a href="//imgur.com/" + {{random_image.id}}></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+    </div>
+  {% endif %}
+</body>
+
+</html>
