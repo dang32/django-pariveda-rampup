@@ -2,10 +2,18 @@
 <html>
 <body>
 
-<h1>Twitter!</h1>
+<h1>OMDB with some embedded tweets!</h1>
 
 <p>API coming soon</p>
-
+{% if movie_list %}
+    <ul>
+    {% for movie in movie_list %}
+        <li><a>{{ movie.title }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
 <a class="twitter-timeline" href="https://twitter.com/maryamhed?ref_src=twsrc%5Etfw">Tweets by maryamhed</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 </body>
